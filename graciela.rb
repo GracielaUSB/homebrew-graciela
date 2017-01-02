@@ -2,15 +2,26 @@
 class Graciela < Formula
   desc ""
   homepage "https://github.com/GracielaUSB/graciela"
-  url "https://raw.githubusercontent.com/adgalad/homebrew-graciela/master/graciela.tar.gz"
-  version "0.1.0.0"
-  sha256 "9294a3f0161520512610fe786299908f95e4efb85fb954ee3987db184e0d9a26"
+  url "https://github.com/GracielaUSB/homebrew-graciela/raw/master/graciela.bottle.tar.gz"
+  version "0.2.0.0"
+  sha256 "4d1451ccdf41890c25a2c9b3bc152ec0947fc67184812f2630e561290a5603d2"
+
+  depends_on "GracielaUSB/graciela/clang35"
 
   def install
+    
+    ## Install llvm dylib
+    lib.install "./lib/libLLVM-3.5.dylib"
 
-    system "clang", "-fPIC", "-shared", "./graciela-lib.c", "-o", "./graciela-lib.so"
-    lib.install "./graciela-lib.so"
+    ## Compile and install C external library for Graciela
+    system "clang", "-lstdc++", "-fPIC", "-shared", "./src/C/libgraciela-abstract/libgraciela-abstract.cpp", "-o", "./src/C/libgraciela-abstract.so"
+    system "clang", "-fPIC", "-shared", "./src/C/libgraciela.c", "./src/C/libgraciela-abstract.so", "-o", "./src/C/libgraciela.so"
+    lib.install "./src/C/libgraciela.so"
+    lib.install "./src/C/libgraciela-abstract.so"
+    
+    ## Install graciela
     bin.install "./bin/graciela"
+    
   end 
 
   test do
