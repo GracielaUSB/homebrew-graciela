@@ -28,6 +28,7 @@ class GracielaSource < Formula
     ## Compile and install graciela and its dependencies
     
     bin.install "./src/Haskell/dist/build/graciela/graciela"
+    bin.install "./src/Bash/rungraciela"
     
   end 
 

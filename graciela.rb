@@ -4,7 +4,7 @@ class Graciela < Formula
   homepage "https://github.com/GracielaUSB/graciela"
   url "https://github.com/GracielaUSB/homebrew-graciela/raw/master/graciela.bottle.tar.gz"
   version "0.2.0.0"
-  sha256 "4d1451ccdf41890c25a2c9b3bc152ec0947fc67184812f2630e561290a5603d2"
+  sha256 "02139ec260685a899774a0e73a2336fd81becd363721d0a50765a376bef0f537"
 
   depends_on "GracielaUSB/graciela/clang35"
 
@@ -21,6 +21,7 @@ class Graciela < Formula
     
     ## Install graciela
     bin.install "./bin/graciela"
+    bin.install "./bin/rungraciela"
     
   end 
 
