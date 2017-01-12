@@ -1,5 +1,5 @@
 
-class GracielaSource < Formula
+class Gracielasource < Formula
   desc ""
   homepage "https://github.com/GracielaUSB/graciela"
   url "https://github.com/GracielaUSB/graciela/tarball/master/src/"
