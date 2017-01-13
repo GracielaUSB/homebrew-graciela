@@ -6,6 +6,7 @@ class Graciela < Formula
   version "0.2.0.0"
   sha256 "02139ec260685a899774a0e73a2336fd81becd363721d0a50765a376bef0f537"
 
+  
   depends_on "GracielaUSB/graciela/clang35"
 
   def install
