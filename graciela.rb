@@ -15,10 +15,9 @@ class Graciela < Formula
     lib.install "./lib/libLLVM-3.5.dylib"
 
     ## Compile and install C external library for Graciela
-    system "clang", "-lstdc++", "-fPIC", "-shared", "./src/C/libgraciela-abstract/libgraciela-abstract.cpp", "-o", "./src/C/libgraciela-abstract.so"
-    system "clang", "-fPIC", "-shared", "./src/C/libgraciela.c", "./src/C/libgraciela-abstract.so", "-o", "./src/C/libgraciela.so"
-    lib.install "./src/C/libgraciela.so"
-    lib.install "./src/C/libgraciela-abstract.so"
+    
+    system "clang", "-lm", "-lstdc++", "-fPIC", "-shared", "./src/C/libgraciela-abstract/libgraciela-abstract.cpp", "./src/C/libgraciela.c", "-o", "libgraciela.so"
+    lib.install "libgraciela.so"
     
     ## Install graciela
     bin.install "./bin/graciela"
