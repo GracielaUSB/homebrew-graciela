@@ -4,7 +4,7 @@ class Graciela < Formula
   homepage "https://github.com/GracielaUSB/graciela"
   url "https://github.com/GracielaUSB/homebrew-graciela/raw/master/graciela.bottle.tar.gz"
   version "0.2.0.0"
-  sha256 "0722c14fdf2f922b975dc94d0d33e35a3ddef003a18bc29abcc1c3723641a796"
+  sha256 "a6b8620f10199e9a5a3455783d03669f623784b0f42a3bda2b5ceac75b226005"
 
   
   depends_on "GracielaUSB/graciela/clang35"
