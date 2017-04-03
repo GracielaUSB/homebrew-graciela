@@ -2,9 +2,9 @@
 class Graciela < Formula
   desc ""
   homepage "https://github.com/GracielaUSB/graciela"
-  url "https://github.com/GracielaUSB/homebrew-graciela/releases/download/v1.0/graciela.bottle.tar.gz"
+  url "https://github.com/GracielaUSB/homebrew-graciela/releases/download/v2.0.4/graciela.bottle.tar.gz"
   version "0.2.0.0"
-  sha256 "22a548a158264fd052d187b7d1abd25fcc136dedb9392957a791183ac536026c"
+  sha256 "2463c45b7dfade8f77d2858a0b27653941ce2570ad2d702c7af9a26b77764665"
 
   
   depends_on "GracielaUSB/graciela/clang35"
