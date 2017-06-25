@@ -3,7 +3,7 @@ class Graciela < Formula
   desc ""
   homepage "https://github.com/GracielaUSB/graciela"
   url "https://github.com/GracielaUSB/homebrew-graciela/releases/download/v2.0.4/graciela.bottle.tar.gz"
-  version "0.2.0.0"
+  version "0.2.0.4"
   sha256 "2463c45b7dfade8f77d2858a0b27653941ce2570ad2d702c7af9a26b77764665"
 
   
