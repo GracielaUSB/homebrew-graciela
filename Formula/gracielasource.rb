@@ -16,10 +16,10 @@ class Gracielasource < Formula
 
     ## Compile and install external library for Graciela
     system "clang", "-lstdc++", "-fPIC", "-shared", "./src/C/libgraciela-abstract/libgraciela-abstract.cpp", "-o", "./src/C/libgraciela-abstract.so"
-    system "clang", "-fPIC", "-shared", "./src/C/libgraciela.c", "./src/C/libgraciela-abstract.so", "-o", "./src/C/libgraciela.so"
+    system "clang", "-lstdc++", "-fPIC", "-shared", "./src/C/libgraciela.c", "./src/C/libgraciela-abstract/libgraciela-abstract.cpp", "-o", "./src/C/libgraciela.so"
     system "cabal", "update"
     system "cabal", "install", "llvm-general", "-fshared-llvm"
-    system "cabal", "install", "./src/Haskell/graciela.cabal"
+    system "cabal", "install", "graciela.cabal"
     lib.install "./src/C/libgraciela.so"
     lib.install "./src/C/libgraciela-abstract.so"
     
